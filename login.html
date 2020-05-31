@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LoginForm</title>
+     <!-- <link rel="stylesheet" href="style.css"> -->
+    <script>
+  /*  window.alert("Hello");
+  */
+      // var n=prompt("Enter value");
+      // document.write(n);
+      // var n=eval("10*5");
+      //  document.write(n);
+      // var n=parseInt("10");
+      //  document.write(n*10+"</br>");
+      //  var n=parseFloat("10.5");
+      //   document.write(n*10.9+"</br>");
+      function validate()
+      {
+        var f=document.getElementById("fname").value;
+          var l=document.getElementById("pass").value;
+         // alert(f+l);
+         if(f==""||f==null)
+         {
+         alert("enter id");
+       }
+       if(l==""||l==null)
+       {
+       alert("enter pass");
+     }
+
+      }
+    </script>
+  </head>
+  <body >
+    <!-- <body onload="alert('Hitesh')"> -->
+     <!-- <h1 onmouseover="alert('hi')">Login</h1> -->
+    <!-- <p onclick="alert('Hitesh')"> hello</p> -->
+     <form  onsubmit="validate()" method="POST">
+     <!-- <form  onsubmit="alert('hi')"method="POST"> -->
+      <div>
+    <h2>LoginForm</h2>
+      <table align="center">
+
+    <tr>
+    <td>id</td><td><input type="text" id="fname" value="Hitesh"/></td></tr>
+<td>password</td><td><input type="password"id="pass" placeholder="Enter your password"/></td></tr>
+
+   <tr><td style="padding-left: 30%">
+   <button  type="submit" value="login" name="Button">submit</button></td>
+   <td style="padding-left: 40%">
+   <button type="reset" value="reset" name="Button">reset</button>
+   </td>
+</tr>
+   </table>
+
+      </div>
+    </form>
+  </body>
+</html>

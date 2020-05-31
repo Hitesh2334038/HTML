@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stud>
+  <stud>
+  <name>Hitesh</name>
+  <age>26</age>
+</stud>
+<stud>
+  <name initial="n">Hitesh</name>
+  <initial>hey</initial>
+  <age>26</age>
+</stud>
+</stud>

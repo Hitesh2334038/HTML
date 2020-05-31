@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LoginForm</title>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      function validate()
+      {
+        var fname=document.getElementById("fname").value;
+        var lname=document.getElementById("lname").value;
+        var email=document.getElementById("email").value;
+        var age=document.getElementById("age").value;
+        var address=document.getElementById("address").value;
+        var gender1=document.getElementById("a");
+        var gender2=document.getElementById("b");
+        var gender3=document.getElementById("c");
+        var c1=document.getElementById("c1");
+        var c2=document.getElementById("c2");
+        var c3=document.getElementById("c3");
+        var img=document.forms['myform']['image'];
+        var img1=document.forms['myform']['image1'];
+        var img2=document.forms['myform']['image2'];
+        var validExt=["jpeg","png","jpg"];
+          var validExt1=["jpeg","png","jpg"];
+            var validExt2=["jpeg","png","jpg"];
+
+      if(fname==""||fname==null){
+      document.getElementById("fnameerror").innerHTML="Enter the correct  Firstname";
+    return false;
+      }
+      else{
+      document.getElementById("fnameerror").innerHTML="";
+      }
+      if(lname==""||lname==null)
+      {
+      document.getElementById("lnameerror").innerHTML="Enter the correct  LastName";
+     return false;
+      }
+      else
+      {
+      document.getElementById("lnameerror").innerHTML="";
+      }
+
+      if(email==""||email==null)
+      {
+        document.getElementById("emailerror").innerHTML="Enter the correct  EmailId";
+      return false;
+      }
+        else
+        {
+        document.getElementById("emailerror").innerHTML="";
+       }
+      if(isNaN(age))
+      {
+      document.getElementById("ageerror").innerHTML="Enter the correct  age";
+      return false;
+     }
+     else
+     {
+      document.getElementById("ageerror").innerHTML="";
+     }
+      if(address==""||address==null)
+      {
+      document.getElementById("addresserror").innerHTML="Enter the correct  postalAddress";
+    return false;
+      }
+      else
+      {
+      document.getElementById("addresserror").innerHTML="";
+      }
+       if(gender1.checked==false && gender2.checked==false && gender3.checked==false )
+     {
+       document.getElementById("gendererror").innerHTML="choose ur gender";
+       return false;
+     }
+     else{
+       document.getElementById("gendererror").innerHTML="";
+     }
+     if(c1.checked==false && c2.checked==false && c3.checked==false )
+   {
+     document.getElementById("certificateeerror").innerHTML="select one certificate";
+     return false;
+   }
+   else{
+     document.getElementById("certificateeerror").innerHTML="";
+   }
+  if(img.value=="")
+  {
+     //document.getElementById("imgerror1").innerHTML="upload the image";
+     alert("no image selected");
+     return false;
+  }
+  else{
+  //  var pos_of_dot=img.value.lastIndexOf('.');
+var pos=img.value.lastIndexOf('.')+1;
+var img_ext=img.value.substring(pos);
+var result=validExt.includes(img_ext);
+if(result==false)
+{
+  alert("selected file is not image");
+  return false;
+}
+else{
+  alert("selected image uploaded");
+}
+  }
+  if(img1.value=="")
+  {
+     //document.getElementById("imgerror1").innerHTML="upload the image";
+     alert("no image selected");
+     return false;
+  }
+  else{
+  //  var pos_of_dot=img.value.lastIndexOf('.');
+var pos=img1.value.lastIndexOf('.')+1;
+var img_ext=img1.value.substring(pos);
+var result=validExt1.includes(img_ext);
+if(result==false)
+{
+  alert("selected file is not image");
+  return false;
+}
+else{
+  alert("selected image uploaded");
+}
+}
+if(img2.value=="")
+{
+   //document.getElementById("imgerror1").innerHTML="upload the image";
+   alert("no image selected");
+   return false;
+}
+else{
+//  var pos_of_dot=img.value.lastIndexOf('.');
+var pos=img2.value.lastIndexOf('.')+1;
+var img_ext=img2.value.substring(pos);
+var result=validExt2.includes(img_ext);
+if(result==false)
+{
+alert("selected file is not image");
+return false;
+}
+else{
+alert("selected image uploaded");
+}
+  }
+return true;
+    }
+    </script>
+    <form  name="myform" onsubmit="return validate()" method="POST">
+      <div>
+    <h2>BIODATAFORM</h2>
+      <table align="center">
+
+    <tr>
+    <td>FName</td><td><input type="text" id="fname" placeholder="Enter your Firstname"/></td>
+  <td><span id="fnameerror" style="color:red">*</span></td></tr>
+<td>LName</td><td><input type="text" id="lname" placeholder="Enter your LastName"/></td>
+<td><span id="lnameerror" style="color:red">*</span></td></tr>
+<td>EmailId</td><td><input type="email" id="email" placeholder="Enter your EmailId"/></td>
+<td><span id="emailerror" style="color:red">*</span></td></tr>
+<td>Age</td><td><input type="text" id="age" placeholder="Enter your Age"/></td>
+<td><span id="ageerror" style="color:red">*</span></td></tr>
+<tr><td>address</td>
+
+</address>
+  <td><input type="<textarea rows="8" cols="80" id="address" placeholder="Enter your Address"></textarea>"</td>
+<td><span id="addresserror" style="color:red">*</span></td></tr>
+  <tr ><td>Gender</td>
+    <td>
+    <input type="radio" id="a" name="gender" value="male" >male
+      <input type="radio" id="b"name="gender" value="female">female
+      <input type="radio" id="c" name="gender" value="others">others
+
+  </td><td><span id="gendererror" style="color:red">*</span></td></tr>
+
+
+<tr><td>Education</td>
+<td><select id="Education">
+<option>select</option>
+  <option>mechanicalEngg</option>
+<option>ElectricalEngg</option>
+<option>ITEngg </option>
+<option>ElectronicsEngg</option>
+
+</select></td>
+</tr>
+<tr><td>upload certificate</td>
+<td><input type="checkbox" id="c1" name="10th"value="10th">10th marksheet</br>
+<input type="checkbox" id="c2" name="diploma"value="diploma">diploma certificate</br>
+<input type="checkbox" id="c3" name="degree"value="degree">degree certificate
+
+</td>
+<td><span id="certificateeerror" style="color:red">*</span>
+</tr>
+<!--  <tr><td style="text-align: center><input type="submit" value="submit">
+   <input type="reset" value="reset"></td></tr>-->
+
+
+
+
+   <tr><td>Upload the passport size image here:</td>
+  <td><input type="file" name="image" </td>
+  <td><span id="imgerror1" style="color:red">*</span>
+   </tr>
+   <tr><td>Upload the certificates here:</td>
+<td><input type="file" name="image1" </td>
+<td><span id="imgerror2" style="color:red">*</span>
+   </tr>
+   <tr><td>Upload the ExtraCourses certificates here:</td>
+<td><input type="file" name="image2" </td>
+<td><span id="imgerror3" style="color:red">*</span>
+   </tr>
+   <tr><td style="padding-left: 50%">
+   <input  type="submit" name="submit" value="Submit" /></td>
+   <td style="padding-left: 30%">
+   <button type="reset" value="reset" name="Button">reset</button>
+   </td>
+</tr>
+   </table>
+
+      </div>
+    </form>
+  </body>
+</html>

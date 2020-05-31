@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<HITESH>
+  <akshay>
+    <name>Akshay</name>
+    <age>23</age>
+  </akshay>
+  <satish>
+    <name>satish</name>
+    <age>23</age>
+  </satish>
+  <aditya>
+    <name>aditya</name>
+    <age>21</age>
+  </aditya>
+</HITESH>
